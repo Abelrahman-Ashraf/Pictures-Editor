@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pictures-Editor</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><span>A</span>Pictures-Editor</h1>
+        </div>
+        <div id="content" class="content">
+            <div id="imageBox" class="image">
+                <img id="image">
+                <canvas id="myCanvas" class="canvas"></canvas>
+                <div class="upload">
+                    <label class="btnubload" for="btnUpload">upload</label>
+                    <input style="display:none;" class="btnupload" id="btnUpload" type="file"></input>
+                </div>
+            </div>
+            <div class="editing">
+                <label for="saturate">Saturate</label>
+                <input id="saturate" type="range" min="0" max="200" value="100">
+                <label for="contrast">Contrast</label>
+                <input id="contrast" type="range" min="0" max="200" value="100">
+                <label for="brightness">Brightness</label>
+                <input id="brightness" type="range" min="0" max="200" value="100">
+                <label for="sepia">Sepia</label>
+                <input id="sepia" type="range" min="0" max="200" value="0">
+                <label for="grayscale">Grayscale</label>
+                <input id="grayscale" type="range" step="0.1" min="0" max="1" value="0">
+                <label for="blur">Blur</label>
+                <input id="blur" type="range" step="0.1" min="0" max="10" value="0">
+                <label for="huoRotate">Huo Rotate</label>
+                <input id="huoRotate" type="range" min="0" max="350" value="0">
+                <div class="buttons">
+                    <button onclick="resetFilters()" id="reset">Reset</button>
+                    <a download="pic" id="download"><button >Download</button></a>
+                </div>
+            </div>
+        </div>
+        <p id="copyRight" class="copyRight">&copy;2022-<span>Abdelrahman_Ashraf</span></p>
+    </div>
+    <script src="edit.js"></script>
+</body>
